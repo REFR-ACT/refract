@@ -1,0 +1,81 @@
+/* Type and the space around it scale together, with bounded reading widths. */
+.header{height:5.375rem;gap:1.5625rem}
+.header nav{font-size:.875rem;gap:2rem}
+.header .button-small{font-size:.875rem;padding:.625rem 1.1875rem}
+.brand-icon{width:2.875rem;height:2.875rem}
+.wordmark{gap:.5rem}
+.hero,.section,.glass-intro,.glass-content>.event-strip{max-width:105rem}
+.fixed-backdrop>img,.glass-lettering>img{width:min(116vw,118.75rem)}
+.glass-intro{padding-block:2.875rem 3rem;gap:3.75rem}
+.glass-intro .hero-copy{max-width:42.5rem;min-width:0}
+.glass-intro .hero-description{max-width:32rem}
+.glass-intro .hero-actions{min-width:16.25rem;flex-shrink:0;gap:1rem}
+.glass-intro .hero-note{max-width:18rem;font-size:.875rem}
+.hero-description,.body-copy{font-size:1.0625rem}
+.button{padding:1.0625rem 1.5625rem;gap:2rem}
+.text-link{font-size:1rem;padding:.75rem 0;gap:2.8125rem}
+.hero-topline .eyebrow,.section-label{font-size:.8125rem}
+.section{padding-block:clamp(4.75rem,7.5vw,7rem)}
+.section-label{margin-bottom:2.25rem;gap:1.0625rem}
+.section-label::before{width:1.25rem}
+.intro-heading{gap:clamp(2.25rem,6vw,5.375rem)}
+.intro-heading .body-copy{max-width:32rem;font-size:1.0625rem}
+.glass-content>.event-strip{padding-block:2.1875rem;gap:1.875rem}
+.event-strip div{padding-left:1.125rem}
+.event-strip div>span{font-size:.8125rem;margin-bottom:.4375rem}
+.event-strip p,.event-strip>a{font-size:.9375rem;line-height:1.7}
+.small-note{font-size:.875rem;max-width:55ch}
+.directions{gap:1.125rem;margin-top:2.625rem}
+.directions>div{min-width:0;min-height:20.3125rem;padding:1.75rem 1.625rem;border-radius:.875rem}
+.directions p{font-size:1rem;max-width:28ch;margin-top:.75rem}
+.directions h3{max-width:none}
+.direction-art{height:6.5rem;margin-bottom:1.75rem}
+.direction-art svg{height:6.875rem}
+.funding{gap:2.1875rem}
+.funding>div{padding-bottom:2rem}
+.funding p{font-size:.9375rem}
+#support .body-copy,#support .small-note{max-width:32rem}
+.faq-section{padding-block:6.25rem}
+.faq-section>.section-label{top:6.25rem}
+.faq-section h2{max-width:26rem;margin-top:3.75rem}
+.faq-list summary{padding-block:1.6875rem;min-height:4.75rem}
+.faq-list details p{font-size:1rem;padding-bottom:1.75rem}
+.footer-top,.footer-bottom{max-width:94.5rem}
+.footer-top p,.back-top,.footer-bottom{font-size:.875rem}
+footer{padding:3.4375rem 6% 1.875rem}
+.footer-bottom{margin-top:3rem;padding-top:1.5rem}
+.team-formation{margin:3rem 0 1.625rem;padding-top:1.5rem}
+.formation-heading{margin-bottom:1.5rem}
+.formation-heading h3,.formation-team-size{font-size:.9375rem}
+@media(min-width:761px){
+ .hero{min-height:max(21.875rem,calc(100svh - var(--menu-height) - 19.375rem))}
+ .formation-stage{--team-height:4.75rem;--team-gap:.875rem}
+ .person{width:1.375rem;height:2rem}
+}
+@media(min-width:761px) and (max-width:1100px){
+ .header nav{gap:1.25rem}
+ .intro-heading h2{max-width:45%;flex-shrink:1}
+ .intro-heading .body-copy{max-width:50%}
+}
+@media(max-width:760px){
+ .header{height:4.625rem;gap:1rem}
+ .brand-icon{width:2.5rem;height:2.5rem}
+ .fixed-backdrop>img,.glass-lettering>img{width:118vw}
+ .glass-intro{padding:1.875rem 6% 2.375rem}
+ .glass-intro .hero-actions{min-width:0;gap:1.125rem}
+ .glass-intro .hero-note{max-width:none}
+ .hero-actions .button,.hero-actions .text-link{font-size:.9375rem}
+ .section{padding-block:4.5rem}
+ .section-label{margin-bottom:2rem}
+ .intro-heading .body-copy{max-width:none}
+ .glass-content>.event-strip{gap:1.5rem .9375rem;padding-block:1.6875rem}
+ .event-strip p,.event-strip>a{font-size:.875rem}
+ .directions>div{min-height:0}
+ .faq-section{padding-block:4.875rem}
+ .faq-section h2{margin:0 0 1.75rem}
+ .team-formation{margin-top:2rem;padding-top:1.25rem}
+ .formation-heading{gap:.75rem;margin-bottom:1.25rem}
+ .formation-heading h3,.formation-team-size{font-size:.8125rem}
+ footer{padding:2.1875rem 6% 1.5625rem}
+ .footer-bottom{margin-top:1.875rem}
+}

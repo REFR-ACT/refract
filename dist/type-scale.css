@@ -1,0 +1,3 @@
+/* Shared scale: readable on small screens, proportional on larger displays.
+   The rem bounds preserve browser font-size and zoom preferences. */
+:root{font-size:clamp(1rem,calc(.5rem + .625vw),1.75rem)}

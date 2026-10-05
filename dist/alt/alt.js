@@ -52,9 +52,9 @@
   document.documentElement.classList.add('js-ready');
 
   const projects = [
-    {label:'01 / SOFTWARE & AI',title:'Make the thing\nyou wish existed.',description:'A useful app. A small model. A tool that saves you doing the same thing twice. Start with something you’d use.',prompt:'Automate a daily task'},
-    {label:'02 / ROBOTICS & HARDWARE',title:'Take it off\nthe screen.',description:'Work with sensors, build a robot, or make a physical prototype. See what happens when your code meets the real world.',prompt:'Build something that responds to light'},
-    {label:'03 / SCIENCE & DATA',title:'Start with\na question.',description:'Find a dataset, run a simulation, and see what the evidence says. A good question can be the beginning of a whole project.',prompt:'Explore a pattern in real data'}
+    {label:'Software & AI',title:'Build a useful tool',description:'Make an app, experiment with AI, or automate something you do every day.',prompt:'Try automating a daily task'},
+    {label:'Robotics & hardware',title:'Make something physical',description:'Work with sensors, build a robot, or make a physical prototype. See what happens when your code meets the real world.',prompt:'Try a device that responds to light'},
+    {label:'Science & data',title:'Test your theory',description:'Find a dataset, run a simulation, and see what the evidence says. A good question can be the beginning of a whole project.',prompt:'Try exploring a pattern in real data'}
   ];
   const projectTabs = [...document.querySelectorAll('[data-project]')];
   const showcase = document.querySelector('.project-showcase');
@@ -68,7 +68,7 @@
     title.replaceChildren();
     project.title.split('\n').forEach((line, i) => { if (i) title.append(document.createElement('br')); title.append(document.createTextNode(line)); });
     document.querySelector('#project-description').textContent = project.description;
-    document.querySelector('#project-prompt').textContent = `An idea to try → ${project.prompt}`;
+    document.querySelector('#project-prompt').textContent = project.prompt;
     const panel = document.querySelector('#project-panel');
     panel.setAttribute('aria-labelledby', `project-tab-${index}`);
     projectCopy.classList.remove('is-changing');

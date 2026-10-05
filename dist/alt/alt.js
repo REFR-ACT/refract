@@ -17,6 +17,7 @@
     if (event.key === 'Escape' && !mobileNav.hidden) { closeMenu(); menuButton.focus(); }
   });
   document.addEventListener('pointerdown', event => { if (!event.target.closest('.site-header')) closeMenu(); });
+  document.addEventListener('focusin', event => { if (!event.target.closest('.site-header')) closeMenu(); });
   matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) closeMenu(); });
 
   const navLinks = [...document.querySelectorAll('.desktop-nav a')];
@@ -97,8 +98,13 @@
   function measureTimeline() {
     const padding = parseFloat(getComputedStyle(viewport).paddingRight) || 0;
     travel = Math.max(0, track.scrollWidth - viewport.clientWidth + padding);
-    const pinned = timelineMedia.matches && travel > 0;
+    let pinned = timelineMedia.matches && travel > 0;
     schedule.classList.toggle('is-pinned', pinned);
+    const pin = schedule.querySelector('.schedule-pin');
+    if (pinned && pin.scrollHeight > pin.clientHeight + 1) {
+      pinned = false;
+      schedule.classList.remove('is-pinned');
+    }
     distance = pinned ? Math.max(1200, travel * 1.8) : 0;
     schedule.style.height = pinned ? `${innerHeight + distance}px` : '';
     track.style.transform = '';

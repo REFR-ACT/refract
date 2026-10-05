@@ -70,7 +70,6 @@
     document.querySelector('#project-prompt').textContent = `An idea to try → ${project.prompt}`;
     const panel = document.querySelector('#project-panel');
     panel.setAttribute('aria-labelledby', `project-tab-${index}`);
-    panel.textContent = `${project.title.replace('\n',' ')} ${project.description} An idea to try: ${project.prompt}.`;
     projectCopy.classList.remove('is-changing');
     requestAnimationFrame(() => projectCopy.classList.add('is-changing'));
     if (focus) projectTabs[index].focus();

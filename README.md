@@ -4,6 +4,8 @@ The frontend for [refracthack.org](https://refracthack.org), a student hackathon
 
 Plain HTML, CSS and JavaScript. The site includes the logo lighting effect, a scrolling timeline, and draggable team icons.
 
+An alternate design is available at [refracthack.org/alt/](https://refracthack.org/alt/). Everything for it lives in `dist/alt/`; the original pages stay separate. Its registration, account and admin screens use the same live API and accounts.
+
 ## Preview locally
 
 ```sh

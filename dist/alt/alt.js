@@ -105,6 +105,7 @@
     if (pinned) viewport.scrollLeft = 0;
     timelineTop = schedule.getBoundingClientRect().top + scrollY;
     updateScroll();
+    if (!pinned) paintTimeline(travel ? viewport.scrollLeft / travel : 0);
   }
   function paintTimeline(progress) {
     timelineProgress = Math.max(0, Math.min(1, progress));
@@ -141,7 +142,6 @@
   window.addEventListener('resize', () => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(measureTimeline); });
   window.addEventListener('load', measureTimeline, {once:true});
   measureTimeline();
-  paintTimeline(0);
 
   const counterObserver = new IntersectionObserver(entries => entries.forEach(entry => {
     if (!entry.isIntersecting) return;

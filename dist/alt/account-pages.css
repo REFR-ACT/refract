@@ -1,6 +1,6 @@
 :root {
   font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
-  font-size: clamp(16px, 1.03vw, 20px);
+  font-size: clamp(16px, 1.25vw, 32px);
   font-synthesis: none;
   color-scheme: light;
   color: #1d1d1f;
